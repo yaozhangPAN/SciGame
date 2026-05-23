@@ -1,0 +1,14 @@
+:root{--bg:#070b2e;--card:#10184aee;--accent:#ff4fa3;--good:#38d27d;--bad:#ff6b6b;--text:#f6f8ff}
+*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI","PingFang SC",sans-serif;color:var(--text);background:radial-gradient(circle at 20% 20%,#1d2c8f,#070b2e 45%,#03051a)}
+.stars{position:fixed;inset:0;background-image:radial-gradient(white 1px,transparent 1px);background-size:3px 3px;opacity:.2;pointer-events:none}
+.app{max-width:1040px;margin:20px auto;padding:12px}.hero{text-align:center}
+.panel{background:var(--card);border:1px solid #5b6bc4;border-radius:16px;padding:16px;margin-bottom:16px;backdrop-filter:blur(6px)}
+.hidden{display:none}
+input,textarea,button{width:100%;border-radius:10px;border:none;padding:10px;font-size:16px}
+textarea{margin-top:8px;background:#f5f7ff;color:#111}.actions{display:flex;gap:8px;margin-top:8px}.ghost{background:#2a346f;color:#fff}
+button{cursor:pointer;background:linear-gradient(90deg,#ff4fa3,#7e5bff);color:#fff;font-weight:700}
+.topbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+#sceneCanvas{width:100%;height:auto;border-radius:12px;border:2px solid #7c8fff;background:#050b2a}
+.tag{display:inline-block;background:#243897;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.choices{display:grid;gap:10px}.choice{background:#1c2a72;border:1px solid #6e80db;text-align:left}
+.feedback{margin-top:8px;padding:10px;border-radius:10px}.good{background:#133d29}.bad{background:#4b1c2a}
