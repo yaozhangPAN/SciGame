@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>宇宙大爆炸 · AI科学RPG</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stars"></div>
+  <main class="app">
+    <header class="hero">
+      <h1>宇宙大爆炸：AI科学RPG闯关</h1>
+      <p>上传文档 → 自动生成剧情、关卡、插画与音乐氛围</p>
+    </header>
+
+    <section id="setup" class="panel">
+      <h2>1) 上传故事文档</h2>
+      <p>支持 txt / md；可点“加载示例”一键填入完整剧情+原题，并体验5张示范CG。</p>
+      <input id="fileInput" type="file" accept=".txt,.md,.json" />
+      <textarea id="storyInput" rows="8" placeholder="也可以直接粘贴学生故事内容..."></textarea>
+      <div class="actions">
+        <button id="generateBtn">生成新游戏</button>
+        <button id="demoBtn" class="ghost">加载示例</button>
+      </div>
+    </section>
+
+    <section id="game" class="panel hidden">
+      <div class="topbar">
+        <div>章节：<span id="chapter"></span>/5</div>
+        <div>科学分：<span id="score">0</span></div>
+        <div>结局倾向：<span id="endingHint">探索中</span></div>
+      </div>
+
+      <canvas id="sceneCanvas" width="960" height="540"></canvas>
+
+      <h2 id="sceneTitle"></h2>
+      <p id="narration"></p>
+      <div id="conceptTag" class="tag"></div>
+
+      <div id="choices" class="choices"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button id="nextBtn" class="hidden">下一关</button>
+    </section>
+
+    <section id="ending" class="panel hidden">
+      <h2 id="endingTitle"></h2>
+      <p id="endingText"></p>
+      <button id="restartBtn">重新生成一次</button>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
